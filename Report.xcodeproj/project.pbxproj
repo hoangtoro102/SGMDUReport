@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,12 +13,25 @@
 		B766F53524AC86D7005FF0BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F53424AC86D7005FF0BF /* AppDelegate.swift */; };
 		B766F53724AC86D7005FF0BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F53624AC86D7005FF0BF /* SceneDelegate.swift */; };
 		B766F53A24AC86D7005FF0BF /* Report.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B766F53824AC86D7005FF0BF /* Report.xcdatamodeld */; };
-		B766F53C24AC86D7005FF0BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F53B24AC86D7005FF0BF /* ContentView.swift */; };
 		B766F53E24AC86DA005FF0BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B766F53D24AC86DA005FF0BF /* Assets.xcassets */; };
 		B766F54124AC86DA005FF0BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B766F54024AC86DA005FF0BF /* Preview Assets.xcassets */; };
 		B766F54424AC86DA005FF0BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B766F54224AC86DA005FF0BF /* LaunchScreen.storyboard */; };
 		B766F54F24AC86DA005FF0BF /* ReportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F54E24AC86DA005FF0BF /* ReportTests.swift */; };
 		B766F55A24AC86DA005FF0BF /* ReportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F55924AC86DA005FF0BF /* ReportUITests.swift */; };
+		B766F56C24AC8AB6005FF0BF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F56B24AC8AB6005FF0BF /* ListViewController.swift */; };
+		B766F56D24AC8AB6005FF0BF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F56B24AC8AB6005FF0BF /* ListViewController.swift */; };
+		B766F56E24AC8AB6005FF0BF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F56B24AC8AB6005FF0BF /* ListViewController.swift */; };
+		B766F57024AC8ACA005FF0BF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F56F24AC8ACA005FF0BF /* ListViewModel.swift */; };
+		B766F57124AC8ACA005FF0BF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F56F24AC8ACA005FF0BF /* ListViewModel.swift */; };
+		B766F57224AC8ACA005FF0BF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F56F24AC8ACA005FF0BF /* ListViewModel.swift */; };
+		B766F57624ACA978005FF0BF /* ReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F57524ACA978005FF0BF /* ReportModel.swift */; };
+		B766F57824ACA9C7005FF0BF /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F57724ACA9C7005FF0BF /* RecordModel.swift */; };
+		B766F57B24ACAB6D005FF0BF /* DisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F57A24ACAB6D005FF0BF /* DisplayItem.swift */; };
+		B766F57D24ACAE38005FF0BF /* DisplayItemCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B766F57C24ACAE38005FF0BF /* DisplayItemCollection.swift */; };
+		B77224C724AD96AE00071854 /* fetchResource.json in Resources */ = {isa = PBXBuildFile; fileRef = B77224C624AD96AE00071854 /* fetchResource.json */; };
+		B77224C924AD987C00071854 /* ResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224C824AD987C00071854 /* ResourceLoader.swift */; };
+		B77224CC24AD9A4B00071854 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224CB24AD9A4B00071854 /* ListViewModelTests.swift */; };
+		B77224CE24ADA03700071854 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224CD24ADA03700071854 /* ResultModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +63,6 @@
 		B766F53424AC86D7005FF0BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B766F53624AC86D7005FF0BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B766F53924AC86D7005FF0BF /* Report.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Report.xcdatamodel; sourceTree = "<group>"; };
-		B766F53B24AC86D7005FF0BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B766F53D24AC86DA005FF0BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B766F54024AC86DA005FF0BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B766F54324AC86DA005FF0BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +73,16 @@
 		B766F55524AC86DA005FF0BF /* ReportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B766F55924AC86DA005FF0BF /* ReportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportUITests.swift; sourceTree = "<group>"; };
 		B766F55B24AC86DA005FF0BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B766F56B24AC8AB6005FF0BF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		B766F56F24AC8ACA005FF0BF /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		B766F57524ACA978005FF0BF /* ReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModel.swift; sourceTree = "<group>"; };
+		B766F57724ACA9C7005FF0BF /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		B766F57A24ACAB6D005FF0BF /* DisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayItem.swift; sourceTree = "<group>"; };
+		B766F57C24ACAE38005FF0BF /* DisplayItemCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayItemCollection.swift; sourceTree = "<group>"; };
+		B77224C624AD96AE00071854 /* fetchResource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fetchResource.json; sourceTree = "<group>"; };
+		B77224C824AD987C00071854 /* ResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoader.swift; sourceTree = "<group>"; };
+		B77224CB24AD9A4B00071854 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
+		B77224CD24ADA03700071854 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		BA68CCDEB4617461E0BA0B28 /* Pods-Report.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report.release.xcconfig"; path = "Target Support Files/Pods-Report/Pods-Report.release.xcconfig"; sourceTree = "<group>"; };
 		F26C1EE64E5984B5807FE201 /* Pods-ReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReportTests.release.xcconfig"; path = "Target Support Files/Pods-ReportTests/Pods-ReportTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +125,6 @@
 				219EB97FDDD19A163E2014D9 /* Pods-ReportTests.debug.xcconfig */,
 				F26C1EE64E5984B5807FE201 /* Pods-ReportTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,14 +163,10 @@
 		B766F53324AC86D7005FF0BF /* Report */ = {
 			isa = PBXGroup;
 			children = (
-				B766F53424AC86D7005FF0BF /* AppDelegate.swift */,
-				B766F53624AC86D7005FF0BF /* SceneDelegate.swift */,
-				B766F53B24AC86D7005FF0BF /* ContentView.swift */,
-				B766F53D24AC86DA005FF0BF /* Assets.xcassets */,
-				B766F54224AC86DA005FF0BF /* LaunchScreen.storyboard */,
-				B766F54524AC86DA005FF0BF /* Info.plist */,
-				B766F53824AC86D7005FF0BF /* Report.xcdatamodeld */,
-				B766F53F24AC86DA005FF0BF /* Preview Content */,
+				B766F57924ACAB4D005FF0BF /* Presentations */,
+				B766F57324ACA92E005FF0BF /* Model */,
+				B766F56824AC88FC005FF0BF /* Screens */,
+				B766F56724AC88EB005FF0BF /* System */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -165,6 +182,8 @@
 		B766F54D24AC86DA005FF0BF /* ReportTests */ = {
 			isa = PBXGroup;
 			children = (
+				B77224CA24AD9A1300071854 /* ViewModelTests */,
+				B77224C424AD965F00071854 /* Resource */,
 				B766F54E24AC86DA005FF0BF /* ReportTests.swift */,
 				B766F55024AC86DA005FF0BF /* Info.plist */,
 			);
@@ -178,6 +197,97 @@
 				B766F55B24AC86DA005FF0BF /* Info.plist */,
 			);
 			path = ReportUITests;
+			sourceTree = "<group>";
+		};
+		B766F56724AC88EB005FF0BF /* System */ = {
+			isa = PBXGroup;
+			children = (
+				B766F53424AC86D7005FF0BF /* AppDelegate.swift */,
+				B766F53624AC86D7005FF0BF /* SceneDelegate.swift */,
+				B766F53D24AC86DA005FF0BF /* Assets.xcassets */,
+				B766F54224AC86DA005FF0BF /* LaunchScreen.storyboard */,
+				B766F54524AC86DA005FF0BF /* Info.plist */,
+				B766F53824AC86D7005FF0BF /* Report.xcdatamodeld */,
+				B766F53F24AC86DA005FF0BF /* Preview Content */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		B766F56824AC88FC005FF0BF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B766F56924AC8A5E005FF0BF /* List */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B766F56924AC8A5E005FF0BF /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B766F56B24AC8AB6005FF0BF /* ListViewController.swift */,
+				B766F56F24AC8ACA005FF0BF /* ListViewModel.swift */,
+				B766F56A24AC8A9A005FF0BF /* CustomCell */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		B766F56A24AC8A9A005FF0BF /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		B766F57324ACA92E005FF0BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B766F57424ACA933005FF0BF /* Response */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B766F57424ACA933005FF0BF /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B766F57524ACA978005FF0BF /* ReportModel.swift */,
+				B77224CD24ADA03700071854 /* ResultModel.swift */,
+				B766F57724ACA9C7005FF0BF /* RecordModel.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B766F57924ACAB4D005FF0BF /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				B766F57A24ACAB6D005FF0BF /* DisplayItem.swift */,
+				B766F57C24ACAE38005FF0BF /* DisplayItemCollection.swift */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		B77224C424AD965F00071854 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B77224C524AD966A00071854 /* JSON */,
+				B77224C824AD987C00071854 /* ResourceLoader.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B77224C524AD966A00071854 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				B77224C624AD96AE00071854 /* fetchResource.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		B77224CA24AD9A1300071854 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				B77224CB24AD9A4B00071854 /* ListViewModelTests.swift */,
+			);
+			path = ViewModelTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77224C724AD96AE00071854 /* fetchResource.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,8 +549,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B766F53A24AC86D7005FF0BF /* Report.xcdatamodeld in Sources */,
+				B766F57B24ACAB6D005FF0BF /* DisplayItem.swift in Sources */,
 				B766F53524AC86D7005FF0BF /* AppDelegate.swift in Sources */,
-				B766F53C24AC86D7005FF0BF /* ContentView.swift in Sources */,
+				B766F57D24ACAE38005FF0BF /* DisplayItemCollection.swift in Sources */,
+				B766F57024AC8ACA005FF0BF /* ListViewModel.swift in Sources */,
+				B77224CE24ADA03700071854 /* ResultModel.swift in Sources */,
+				B766F57624ACA978005FF0BF /* ReportModel.swift in Sources */,
+				B766F57824ACA9C7005FF0BF /* RecordModel.swift in Sources */,
+				B766F56C24AC8AB6005FF0BF /* ListViewController.swift in Sources */,
 				B766F53724AC86D7005FF0BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,7 +565,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B766F56D24AC8AB6005FF0BF /* ListViewController.swift in Sources */,
 				B766F54F24AC86DA005FF0BF /* ReportTests.swift in Sources */,
+				B77224C924AD987C00071854 /* ResourceLoader.swift in Sources */,
+				B77224CC24AD9A4B00071854 /* ListViewModelTests.swift in Sources */,
+				B766F57124AC8ACA005FF0BF /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +577,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B766F56E24AC8AB6005FF0BF /* ListViewController.swift in Sources */,
 				B766F55A24AC86DA005FF0BF /* ReportUITests.swift in Sources */,
+				B766F57224AC8ACA005FF0BF /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,9 +730,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Report/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Report/System/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Report/Info.plist;
+				INFOPLIST_FILE = Report/System/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,9 +750,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Report/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Report/System/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Report/Info.plist;
+				INFOPLIST_FILE = Report/System/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
