@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxDataSources
 
 final class DisplayItemCollection {
     var items = [DisplayItem]()
@@ -55,5 +56,16 @@ final class DisplayItemCollection {
             i+=1
         }
         return sortedList
+    }
+}
+struct PresentationSection {
+    var header: String
+    var items: [DisplayItem]
+}
+
+extension PresentationSection: SectionModelType {
+    init(original: PresentationSection, items: [DisplayItem]) {
+        self = original
+        self.items = items
     }
 }

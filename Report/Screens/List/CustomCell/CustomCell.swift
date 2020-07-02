@@ -13,7 +13,7 @@ class CustomCell: UITableViewCell {
     var headerLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.textColor = .darkGray
-        label.font = .systemFont(ofSize: 24)
+        label.font = .systemFont(ofSize: 20)
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 0
         return label
@@ -22,13 +22,12 @@ class CustomCell: UITableViewCell {
         let label = UILabel(frame: .zero)
         label.textColor = .lightGray
         label.adjustsFontSizeToFitWidth = true
-        label.font = .systemFont(ofSize: 16)
+        label.font = .systemFont(ofSize: 12)
         return label
     }()
     var clickableImageView: UIImageView = {
         let imageV = UIImageView(frame: .zero)
         imageV.clipsToBounds = true
-        imageV.layer.cornerRadius = 10
         imageV.image = UIImage(named: "ic_arrow_down")
         return imageV
     }()
@@ -36,7 +35,9 @@ class CustomCell: UITableViewCell {
         didSet {
             if let displayItem = displayItem {
                 headerLabel.text = "Year: \(displayItem.year)"
-                totalLabel.text = "Total volume of mobile data: \(displayItem.volumeOfYear) (Petabytes)"
+                let formatText = String(format: "%.5f", displayItem.volumeOfYear)
+                totalLabel.text = "Total volume of mobile data: \(formatText) (Petabytes)"
+                totalLabel.highlight(searchedText: formatText, color: .darkGray)
                 clickableImageView.isHidden = !displayItem.decrease
             }
         }
@@ -63,4 +64,24 @@ class CustomCell: UITableViewCell {
 
         labelStackView.edgesToSuperview(excluding: .top, insets: .left(5))
     }
+}
+extension UILabel {
+
+    func highlight(searchedText: String?..., color: UIColor = .red) {
+        guard let txtLabel = self.text else { return }
+
+        let attributeTxt = NSMutableAttributedString(string: txtLabel)
+
+        searchedText.forEach {
+            if let searchedText = $0?.lowercased() {
+                let range: NSRange = attributeTxt.mutableString.range(of: searchedText, options: .caseInsensitive)
+
+                attributeTxt.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
+                attributeTxt.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: self.font.pointSize), range: range)
+            }
+        }
+
+        self.attributedText = attributeTxt
+    }
+
 }
