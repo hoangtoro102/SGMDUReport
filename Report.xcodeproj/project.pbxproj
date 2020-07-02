@@ -38,6 +38,7 @@
 		B77224E124ADC20E00071854 /* RxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224E024ADC20E00071854 /* RxHelper.swift */; };
 		B77224E324ADC39400071854 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224E224ADC39300071854 /* ActivityIndicator.swift */; };
 		B77224E624ADD3A600071854 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224E524ADD3A600071854 /* CustomCell.swift */; };
+		B77224E824AE06B900071854 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224E724AE06B900071854 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		B77224E024ADC20E00071854 /* RxHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxHelper.swift; sourceTree = "<group>"; };
 		B77224E224ADC39300071854 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		B77224E524ADD3A600071854 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		B77224E724AE06B900071854 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BA68CCDEB4617461E0BA0B28 /* Pods-Report.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report.release.xcconfig"; path = "Target Support Files/Pods-Report/Pods-Report.release.xcconfig"; sourceTree = "<group>"; };
 		F26C1EE64E5984B5807FE201 /* Pods-ReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReportTests.release.xcconfig"; path = "Target Support Files/Pods-ReportTests/Pods-ReportTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -336,6 +338,7 @@
 			children = (
 				B77224E224ADC39300071854 /* ActivityIndicator.swift */,
 				B77224E024ADC20E00071854 /* RxHelper.swift */,
+				B77224E724AE06B900071854 /* Extensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				B77224E624ADD3A600071854 /* CustomCell.swift in Sources */,
 				B766F57D24ACAE38005FF0BF /* DisplayItemCollection.swift in Sources */,
 				B77224D524ADAAEA00071854 /* APISettings.swift in Sources */,
+				B77224E824AE06B900071854 /* Extensions.swift in Sources */,
 				B77224D324ADAAA500071854 /* ReportAPI.swift in Sources */,
 				B77224D724ADABC500071854 /* EndPointType.swift in Sources */,
 				B766F57024AC8ACA005FF0BF /* ListViewModel.swift in Sources */,
