@@ -32,6 +32,11 @@
 		B77224C924AD987C00071854 /* ResourceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224C824AD987C00071854 /* ResourceLoader.swift */; };
 		B77224CC24AD9A4B00071854 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224CB24AD9A4B00071854 /* ListViewModelTests.swift */; };
 		B77224CE24ADA03700071854 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224CD24ADA03700071854 /* ResultModel.swift */; };
+		B77224D124ADAA3500071854 /* ReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224D024ADAA3500071854 /* ReportService.swift */; };
+		B77224D324ADAAA500071854 /* ReportAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224D224ADAAA500071854 /* ReportAPI.swift */; };
+		B77224D524ADAAEA00071854 /* APISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224D424ADAAEA00071854 /* APISettings.swift */; };
+		B77224D724ADABC500071854 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224D624ADABC500071854 /* EndPointType.swift */; };
+		B77224D924ADACC700071854 /* ApiErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224D824ADACC700071854 /* ApiErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		B77224C824AD987C00071854 /* ResourceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoader.swift; sourceTree = "<group>"; };
 		B77224CB24AD9A4B00071854 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		B77224CD24ADA03700071854 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		B77224D024ADAA3500071854 /* ReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportService.swift; sourceTree = "<group>"; };
+		B77224D224ADAAA500071854 /* ReportAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportAPI.swift; sourceTree = "<group>"; };
+		B77224D424ADAAEA00071854 /* APISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISettings.swift; sourceTree = "<group>"; };
+		B77224D624ADABC500071854 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		B77224D824ADACC700071854 /* ApiErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrors.swift; sourceTree = "<group>"; };
 		BA68CCDEB4617461E0BA0B28 /* Pods-Report.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report.release.xcconfig"; path = "Target Support Files/Pods-Report/Pods-Report.release.xcconfig"; sourceTree = "<group>"; };
 		F26C1EE64E5984B5807FE201 /* Pods-ReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReportTests.release.xcconfig"; path = "Target Support Files/Pods-ReportTests/Pods-ReportTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +173,7 @@
 		B766F53324AC86D7005FF0BF /* Report */ = {
 			isa = PBXGroup;
 			children = (
+				B77224CF24ADAA1600071854 /* Networking */,
 				B766F57924ACAB4D005FF0BF /* Presentations */,
 				B766F57324ACA92E005FF0BF /* Model */,
 				B766F56824AC88FC005FF0BF /* Screens */,
@@ -288,6 +299,18 @@
 				B77224CB24AD9A4B00071854 /* ListViewModelTests.swift */,
 			);
 			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		B77224CF24ADAA1600071854 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B77224D024ADAA3500071854 /* ReportService.swift */,
+				B77224D224ADAAA500071854 /* ReportAPI.swift */,
+				B77224D424ADAAEA00071854 /* APISettings.swift */,
+				B77224D624ADABC500071854 /* EndPointType.swift */,
+				B77224D824ADACC700071854 /* ApiErrors.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,9 +575,14 @@
 				B766F57B24ACAB6D005FF0BF /* DisplayItem.swift in Sources */,
 				B766F53524AC86D7005FF0BF /* AppDelegate.swift in Sources */,
 				B766F57D24ACAE38005FF0BF /* DisplayItemCollection.swift in Sources */,
+				B77224D524ADAAEA00071854 /* APISettings.swift in Sources */,
+				B77224D324ADAAA500071854 /* ReportAPI.swift in Sources */,
+				B77224D724ADABC500071854 /* EndPointType.swift in Sources */,
 				B766F57024AC8ACA005FF0BF /* ListViewModel.swift in Sources */,
+				B77224D124ADAA3500071854 /* ReportService.swift in Sources */,
 				B77224CE24ADA03700071854 /* ResultModel.swift in Sources */,
 				B766F57624ACA978005FF0BF /* ReportModel.swift in Sources */,
+				B77224D924ADACC700071854 /* ApiErrors.swift in Sources */,
 				B766F57824ACA9C7005FF0BF /* RecordModel.swift in Sources */,
 				B766F56C24AC8AB6005FF0BF /* ListViewController.swift in Sources */,
 				B766F53724AC86D7005FF0BF /* SceneDelegate.swift in Sources */,
