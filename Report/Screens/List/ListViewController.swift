@@ -33,7 +33,7 @@ class ListViewConroller: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         configureTableView()
         view.addSubview(activityIndicatorView)
-        tableView.refreshControl = refreshControl
+//        tableView.refreshControl = refreshControl
         refreshControl.backgroundColor = .clear
         refreshControl.tintColor = .lightGray
         activityIndicatorView.color = .blue

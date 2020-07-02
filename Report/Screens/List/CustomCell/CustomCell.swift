@@ -32,6 +32,13 @@ class CustomCell: UITableViewCell {
         imageV.image = UIImage(named: "ic_arrow_down")
         return imageV
     }()
+    var btnCover: UIButton = {
+        let btn = UIButton(frame: .zero)
+        btn.backgroundColor = .clear
+        btn.isUserInteractionEnabled = true
+        btn.isEnabled = true
+        return btn
+    }()
     var displayItem: DisplayItem? {
         didSet {
             if let displayItem = displayItem {
@@ -54,35 +61,32 @@ class CustomCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupViews() {
+    @objc private func imageTapped() {
+        print("Clickable image tapped")
+    }
+    
+    private func setupViews() {
+        selectionStyle = UITableViewCell.SelectionStyle.none
+    
         addSubview(headerLabel)
         addSubview(totalLabel)
+        addSubview(clickableImageView)
+        addSubview(btnCover)
+        
+        btnCover.addTarget(self, action: #selector(imageTapped), for: .touchUpInside)
+        
         let labelStackView = UIStackView()
         addSubview(labelStackView)
         labelStackView.addArrangedSubview(headerLabel)
         labelStackView.addArrangedSubview(totalLabel)
         labelStackView.axis = .vertical
 
-        labelStackView.edgesToSuperview(excluding: .bottom, insets: .top(10) + .left(10))
+        clickableImageView.height(18)
+        clickableImageView.width(16)
+        clickableImageView.centerYToSuperview()
+        clickableImageView.edgesToSuperview(excluding: [.top, .bottom, .left], insets: .right(10))
+        btnCover.edges(to: clickableImageView)
+        
+        labelStackView.edgesToSuperview(excluding: .bottom, insets: .top(10) + .left(10) + .right(40))
     }
-}
-extension UILabel {
-
-    func highlight(searchedText: String?..., color: UIColor = .red) {
-        guard let txtLabel = self.text else { return }
-
-        let attributeTxt = NSMutableAttributedString(string: txtLabel)
-
-        searchedText.forEach {
-            if let searchedText = $0?.lowercased() {
-                let range: NSRange = attributeTxt.mutableString.range(of: searchedText, options: .caseInsensitive)
-
-                attributeTxt.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
-                attributeTxt.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: self.font.pointSize), range: range)
-            }
-        }
-
-        self.attributedText = attributeTxt
-    }
-
 }
