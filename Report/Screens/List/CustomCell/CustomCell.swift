@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TinyConstraints
 
 class CustomCell: UITableViewCell {
     
@@ -62,7 +63,7 @@ class CustomCell: UITableViewCell {
         labelStackView.addArrangedSubview(totalLabel)
         labelStackView.axis = .vertical
 
-        labelStackView.edgesToSuperview(excluding: .top, insets: .left(5))
+        labelStackView.edgesToSuperview(excluding: .bottom, insets: .top(10) + .left(10))
     }
 }
 extension UILabel {

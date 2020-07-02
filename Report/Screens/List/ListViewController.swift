@@ -36,6 +36,8 @@ class ListViewConroller: UIViewController, UIScrollViewDelegate {
         tableView.refreshControl = refreshControl
         refreshControl.backgroundColor = .clear
         refreshControl.tintColor = .lightGray
+        activityIndicatorView.color = .blue
+        activityIndicatorView.edgesToSuperview()
         setupBinding()
     }
     
@@ -84,6 +86,6 @@ class ListViewConroller: UIViewController, UIScrollViewDelegate {
 }
 extension ListViewConroller: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 60
     }
 }
