@@ -11,6 +11,10 @@ import Foundation
 final class DisplayItemCollection {
     var items = [DisplayItem]()
     
+    convenience init() {
+        self.init(report: ReportModel())
+    }
+    
     init(report: ReportModel) {
         self.items = []
         if report.result.records.count < 1 {

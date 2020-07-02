@@ -11,4 +11,9 @@ import Foundation
 struct ReportModel: Codable {
     let success: Bool
     let result: ResultModel
+    
+    init() {
+        self.success = true
+        self.result = ResultModel(total: 0, records: [])
+    }
 }
