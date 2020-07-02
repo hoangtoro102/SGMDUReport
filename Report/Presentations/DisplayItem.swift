@@ -12,7 +12,7 @@ final class DisplayItem {
     let year: Int
     let volumeOfYear: Double
     let records: [RecordModel]
-    let decrease: Bool
+    var decrease: Bool
     
     init(year: Int, volumeOfYear: Double, records: [RecordModel], decrease: Bool) {
         self.year = year

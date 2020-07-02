@@ -29,11 +29,7 @@ final class DisplayItemCollection {
             let yearNumber = Int(record.quarter.components(separatedBy: "-")[0]) ?? 0
             if yearNumber > 2007 {
                 if lastItemYear != 0 && yearNumber != lastItemYear {
-                    var decrease = false
-                    if result.count > 0 {
-                        decrease = result.last?.volumeOfYear ?? 0 < volumeOfYear
-                    }
-                    let item = DisplayItem(year: lastItemYear, volumeOfYear: volumeOfYear, records: recordList, decrease: decrease)
+                    let item = DisplayItem(year: lastItemYear, volumeOfYear: volumeOfYear, records: recordList, decrease: false)
                     result.append(item)
 
                     volumeOfYear = 0
@@ -48,6 +44,12 @@ final class DisplayItemCollection {
                 print("Year \(yearNumber) is not in range 2008-2018")
             }
         }
-        return result.sorted { $0.year > $1.year }
+        let sortedList = result.sorted { $0.year > $1.year }
+        var i = 1
+        while i < sortedList.count {
+            sortedList[i].decrease = sortedList[i-1].volumeOfYear > sortedList[i].volumeOfYear
+            i+=1
+        }
+        return sortedList
     }
 }

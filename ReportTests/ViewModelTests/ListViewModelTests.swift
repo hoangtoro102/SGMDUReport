@@ -34,7 +34,7 @@ class ListViewModelTests: XCTestCase {
     func testParserMethod() throws {
         //Given
         let index = 0
-        let givenItem = DisplayItem(year: 2018, volumeOfYear: 10.1, records: [], decrease: false)
+        let givenItem = DisplayItem(year: 2018, volumeOfYear: 75.35964842, records: [], decrease: false)
         
         //When
         let report = try ResourceLoader.loadReport(resource: .fetchResource)
@@ -42,5 +42,7 @@ class ListViewModelTests: XCTestCase {
         
         //Then
         XCTAssertEqual(collection.items[index].year, givenItem.year)
+        XCTAssertEqual(collection.items[index].volumeOfYear, givenItem.volumeOfYear)
+        XCTAssertEqual(collection.items[index].decrease, givenItem.decrease)
     }
 }
