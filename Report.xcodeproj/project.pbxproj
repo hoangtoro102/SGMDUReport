@@ -37,6 +37,7 @@
 		B77224DE24ADAE7900071854 /* ReportApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224DD24ADAE7900071854 /* ReportApiTests.swift */; };
 		B77224E124ADC20E00071854 /* RxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224E024ADC20E00071854 /* RxHelper.swift */; };
 		B77224E324ADC39400071854 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224E224ADC39300071854 /* ActivityIndicator.swift */; };
+		B77224E624ADD3A600071854 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224E524ADD3A600071854 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		B77224DD24ADAE7900071854 /* ReportApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportApiTests.swift; sourceTree = "<group>"; };
 		B77224E024ADC20E00071854 /* RxHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxHelper.swift; sourceTree = "<group>"; };
 		B77224E224ADC39300071854 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		B77224E524ADD3A600071854 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		BA68CCDEB4617461E0BA0B28 /* Pods-Report.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report.release.xcconfig"; path = "Target Support Files/Pods-Report/Pods-Report.release.xcconfig"; sourceTree = "<group>"; };
 		F26C1EE64E5984B5807FE201 /* Pods-ReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReportTests.release.xcconfig"; path = "Target Support Files/Pods-ReportTests/Pods-ReportTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -251,6 +253,7 @@
 		B766F56A24AC8A9A005FF0BF /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				B77224E524ADD3A600071854 /* CustomCell.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				B766F57B24ACAB6D005FF0BF /* DisplayItem.swift in Sources */,
 				B766F53524AC86D7005FF0BF /* AppDelegate.swift in Sources */,
 				B77224E124ADC20E00071854 /* RxHelper.swift in Sources */,
+				B77224E624ADD3A600071854 /* CustomCell.swift in Sources */,
 				B766F57D24ACAE38005FF0BF /* DisplayItemCollection.swift in Sources */,
 				B77224D524ADAAEA00071854 /* APISettings.swift in Sources */,
 				B77224D324ADAAA500071854 /* ReportAPI.swift in Sources */,

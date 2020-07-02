@@ -40,6 +40,11 @@ class ListViewConroller: UIViewController {
     }
     
     func configureTableView() {
+        tableView = UITableView(frame: view.bounds)
+        tableView.backgroundColor = .systemGray5
+        tableView.register(CustomCell.self, forCellReuseIdentifier: String(describing: CustomCell.self))
         
+        view.addSubview(tableView)
+        tableView.edgesToSuperview()
     }
 }
