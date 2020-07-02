@@ -50,9 +50,9 @@ final class DisplayItemCollection {
             }
         }
         let sortedList = result.sorted { $0.year > $1.year }
-        var i = 1
-        while i < sortedList.count {
-            sortedList[i].decrease = sortedList[i-1].volumeOfYear > sortedList[i].volumeOfYear
+        var i = 0
+        while i < sortedList.count - 1 {
+            sortedList[i].decrease = sortedList[i+1].volumeOfYear > sortedList[i].volumeOfYear
             i+=1
         }
         return sortedList
