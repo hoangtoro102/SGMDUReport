@@ -10,6 +10,5 @@ import Foundation
 
 struct ReportModel: Codable {
     let success: Bool
-    let total: Int
-    let records: [RecordModel]
+    let result: ResultModel
 }

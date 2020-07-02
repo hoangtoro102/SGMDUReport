@@ -10,12 +10,13 @@ import Foundation
 
 struct RecordModel: Codable {
     let id: Int
-    let volume: Double
-    let quater: String
+    private let sVolume: String
+    var volume: Double { return Double(sVolume) ?? 0.0 }
+    let quarter: String
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case volume = "volume_of_mobile_data"
-        case quater
+        case sVolume = "volume_of_mobile_data"
+        case quarter
     }
 }
