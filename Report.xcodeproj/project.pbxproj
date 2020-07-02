@@ -37,6 +37,8 @@
 		B77224D524ADAAEA00071854 /* APISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224D424ADAAEA00071854 /* APISettings.swift */; };
 		B77224D724ADABC500071854 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224D624ADABC500071854 /* EndPointType.swift */; };
 		B77224D924ADACC700071854 /* ApiErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224D824ADACC700071854 /* ApiErrors.swift */; };
+		B77224DC24ADADBD00071854 /* MockReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224DB24ADADBD00071854 /* MockReportService.swift */; };
+		B77224DE24ADAE7900071854 /* ReportApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224DD24ADAE7900071854 /* ReportApiTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		B77224D424ADAAEA00071854 /* APISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISettings.swift; sourceTree = "<group>"; };
 		B77224D624ADABC500071854 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		B77224D824ADACC700071854 /* ApiErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrors.swift; sourceTree = "<group>"; };
+		B77224DB24ADADBD00071854 /* MockReportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReportService.swift; sourceTree = "<group>"; };
+		B77224DD24ADAE7900071854 /* ReportApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportApiTests.swift; sourceTree = "<group>"; };
 		BA68CCDEB4617461E0BA0B28 /* Pods-Report.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report.release.xcconfig"; path = "Target Support Files/Pods-Report/Pods-Report.release.xcconfig"; sourceTree = "<group>"; };
 		F26C1EE64E5984B5807FE201 /* Pods-ReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReportTests.release.xcconfig"; path = "Target Support Files/Pods-ReportTests/Pods-ReportTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +197,7 @@
 		B766F54D24AC86DA005FF0BF /* ReportTests */ = {
 			isa = PBXGroup;
 			children = (
+				B77224DA24ADAD9D00071854 /* NetworkingTests */,
 				B77224CA24AD9A1300071854 /* ViewModelTests */,
 				B77224C424AD965F00071854 /* Resource */,
 				B766F54E24AC86DA005FF0BF /* ReportTests.swift */,
@@ -311,6 +316,15 @@
 				B77224D824ADACC700071854 /* ApiErrors.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		B77224DA24ADAD9D00071854 /* NetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				B77224DB24ADADBD00071854 /* MockReportService.swift */,
+				B77224DD24ADAE7900071854 /* ReportApiTests.swift */,
+			);
+			path = NetworkingTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,6 +610,8 @@
 				B766F56D24AC8AB6005FF0BF /* ListViewController.swift in Sources */,
 				B766F54F24AC86DA005FF0BF /* ReportTests.swift in Sources */,
 				B77224C924AD987C00071854 /* ResourceLoader.swift in Sources */,
+				B77224DC24ADADBD00071854 /* MockReportService.swift in Sources */,
+				B77224DE24ADAE7900071854 /* ReportApiTests.swift in Sources */,
 				B77224CC24AD9A4B00071854 /* ListViewModelTests.swift in Sources */,
 				B766F57124AC8ACA005FF0BF /* ListViewModel.swift in Sources */,
 			);

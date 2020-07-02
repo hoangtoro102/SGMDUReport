@@ -7,28 +7,20 @@
 //
 
 import XCTest
+import RxBlocking
+import RxSwift
 @testable import Report
 
 class ListViewModelTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    var service: MockReportService!
+    
+    override func setUp() {
+        service = MockReportService()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    override func tearDown() {
+        service = nil
     }
     
     func testParserMethod() throws {
@@ -44,5 +36,16 @@ class ListViewModelTests: XCTestCase {
         XCTAssertEqual(collection.items[index].year, givenItem.year)
         XCTAssertEqual(collection.items[index].volumeOfYear, givenItem.volumeOfYear)
         XCTAssertEqual(collection.items[index].decrease, givenItem.decrease)
+    }
+    
+    func testFetchDataWhenInitialized() throws {
+        //Given
+        let report = try ResourceLoader.loadReport(resource: .fetchResource)
+        let collection = DisplayItemCollection(report: report)
+        
+        //When
+        
+        
+        //Then
     }
 }
