@@ -14,13 +14,16 @@ import RxSwift
 class ListViewModelTests: XCTestCase {
     
     var service: MockReportService!
+    var viewModel: ListViewModel!
     
     override func setUp() {
         service = MockReportService()
+        viewModel = ListViewModel(service)
     }
     
     override func tearDown() {
         service = nil
+        viewModel = nil
     }
     
     func testParserMethod() throws {
@@ -38,14 +41,18 @@ class ListViewModelTests: XCTestCase {
         XCTAssertEqual(collection.items[index].decrease, givenItem.decrease)
     }
     
-    func testFetchDataWhenInitialized() throws {
+    func testViewModelFetchDataWhenInitialized() throws {
         //Given
         let report = try ResourceLoader.loadReport(resource: .fetchResource)
+        service.report = report
         let collection = DisplayItemCollection(report: report)
         
         //When
-        
+        viewModel.loadDataTrigger.onNext(())
         
         //Then
+        XCTAssertEqual(try viewModel.collection.toBlocking().first()?.items.count, collection.items.count)
+        XCTAssertEqual(try viewModel.collection.toBlocking().first()?.items.first?.year, collection.items.first?.year)
+        XCTAssertEqual(try viewModel.collection.toBlocking().first()?.items.first?.volumeOfYear, collection.items.first?.volumeOfYear)
     }
 }
