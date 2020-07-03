@@ -10,6 +10,7 @@ target 'Report' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'RxDataSources', '~> 4.0'
+  pod 'RxReachability'
 
   target 'ReportTests' do
     inherit! :search_paths
