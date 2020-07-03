@@ -48,11 +48,17 @@ final class ListViewModel {
                     self.collection.onNext(DisplayItemCollection())
                     let report = self.service.fetchReportData()
                     
-                    let cll = report.map({ r in DisplayItemCollection(report: r) })
+                    let cll = report.map({ r -> DisplayItemCollection in
+                        // Saving data for offline
+                        OfflineDataSupporter.setOfflineReportData(model: r)
+                        return DisplayItemCollection(report: r)
+                    })
                     
                     return cll.trackActivity(self.loadingIndicator)
                 }
-        }
+            }.catchError { (error) -> Observable<DisplayItemCollection> in
+                .empty()
+            }
         let request = Observable.of(loadRequest)
             .merge()
             .share(replay: 1)
@@ -70,7 +76,7 @@ final class ListViewModel {
         .share(replay: 1)
         
         Observable
-            .combineLatest(request, response , collection.asObservable()) { request, response, news in
+            .combineLatest(request, response , collection.asObservable()) { request, response, collection in
                 return response
         }
         .sample(response)
