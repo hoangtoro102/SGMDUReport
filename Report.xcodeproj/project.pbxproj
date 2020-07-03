@@ -39,6 +39,8 @@
 		B77224E324ADC39400071854 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224E224ADC39300071854 /* ActivityIndicator.swift */; };
 		B77224E624ADD3A600071854 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224E524ADD3A600071854 /* CustomCell.swift */; };
 		B77224E824AE06B900071854 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77224E724AE06B900071854 /* Extensions.swift */; };
+		B77C499424AEEEC6003A0EA0 /* OfflineDataSupporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77C499324AEEEC6003A0EA0 /* OfflineDataSupporter.swift */; };
+		B77C499924AEF250003A0EA0 /* OfflineDataSupporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77C499824AEF250003A0EA0 /* OfflineDataSupporterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		B77224E224ADC39300071854 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		B77224E524ADD3A600071854 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		B77224E724AE06B900071854 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B77C499324AEEEC6003A0EA0 /* OfflineDataSupporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDataSupporter.swift; sourceTree = "<group>"; };
+		B77C499824AEF250003A0EA0 /* OfflineDataSupporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDataSupporterTests.swift; sourceTree = "<group>"; };
 		BA68CCDEB4617461E0BA0B28 /* Pods-Report.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Report.release.xcconfig"; path = "Target Support Files/Pods-Report/Pods-Report.release.xcconfig"; sourceTree = "<group>"; };
 		F26C1EE64E5984B5807FE201 /* Pods-ReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReportTests.release.xcconfig"; path = "Target Support Files/Pods-ReportTests/Pods-ReportTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +206,7 @@
 		B766F54D24AC86DA005FF0BF /* ReportTests */ = {
 			isa = PBXGroup;
 			children = (
+				B77C499524AEF0C9003A0EA0 /* OfflineDataStorageTests */,
 				B77224DA24ADAD9D00071854 /* NetworkingTests */,
 				B77224CA24AD9A1300071854 /* ViewModelTests */,
 				B77224C424AD965F00071854 /* Resource */,
@@ -339,8 +344,17 @@
 				B77224E224ADC39300071854 /* ActivityIndicator.swift */,
 				B77224E024ADC20E00071854 /* RxHelper.swift */,
 				B77224E724AE06B900071854 /* Extensions.swift */,
+				B77C499324AEEEC6003A0EA0 /* OfflineDataSupporter.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		B77C499524AEF0C9003A0EA0 /* OfflineDataStorageTests */ = {
+			isa = PBXGroup;
+			children = (
+				B77C499824AEF250003A0EA0 /* OfflineDataSupporterTests.swift */,
+			);
+			path = OfflineDataStorageTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -619,6 +633,7 @@
 				B766F57824ACA9C7005FF0BF /* RecordModel.swift in Sources */,
 				B766F56C24AC8AB6005FF0BF /* ListViewController.swift in Sources */,
 				B766F53724AC86D7005FF0BF /* SceneDelegate.swift in Sources */,
+				B77C499424AEEEC6003A0EA0 /* OfflineDataSupporter.swift in Sources */,
 				B77224E324ADC39400071854 /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +642,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77C499924AEF250003A0EA0 /* OfflineDataSupporterTests.swift in Sources */,
 				B766F54F24AC86DA005FF0BF /* ReportTests.swift in Sources */,
 				B77224C924AD987C00071854 /* ResourceLoader.swift in Sources */,
 				B77224DC24ADADBD00071854 /* MockReportService.swift in Sources */,
