@@ -12,12 +12,17 @@ import TinyConstraints
 import RxSwift
 import RxCocoa
 import RxDataSources
+import Reachability
+import RxReachability
 
 class ListViewConroller: UIViewController, UIScrollViewDelegate {
     let viewModel: ListViewModel
     let activityIndicatorView = UIActivityIndicatorView(style: .large)
     var tableView: UITableView!
     let refreshControl = UIRefreshControl()
+    
+    let reachability = Reachability()
+    
     let disposeBag = DisposeBag()
     
     init(_ viewModel: ListViewModel = ListViewModel()) {
@@ -33,11 +38,14 @@ class ListViewConroller: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         configureTableView()
         view.addSubview(activityIndicatorView)
-//        tableView.refreshControl = refreshControl
+        tableView.refreshControl = refreshControl
         refreshControl.backgroundColor = .clear
         refreshControl.tintColor = .lightGray
         activityIndicatorView.color = .blue
         activityIndicatorView.edgesToSuperview()
+        
+        try? reachability?.startNotifier()
+        
         setupBinding()
     }
     
@@ -47,11 +55,26 @@ class ListViewConroller: UIViewController, UIScrollViewDelegate {
             .bind(to: activityIndicatorView.rx.isAnimating)
             .disposed(by: disposeBag)
         
+        Reachability.rx.isReachable
+        .subscribe(onNext: { isReachable in
+            print("Is reachable: \(isReachable)")
+            if isReachable {
+                self.viewModel.loadDataTrigger.onNext(())
+            } else {
+                if let report = OfflineDataSupporter.getOfflineReportData() {
+                    let cll = DisplayItemCollection(report: report)
+                    self.viewModel.collection.onNext(cll)
+                }
+            }
+        })
+        .disposed(by: disposeBag)
+        
         viewModel.loadDataTrigger.onNext(())
         
         refreshControl.rx.controlEvent(.valueChanged)
             .subscribe(onNext: {
-                dataObserver.onNext(())
+                self.viewModel.loadDataTrigger.onNext(())
+                self.refreshControl.endRefreshing()
             })
             .disposed(by: disposeBag)
                 
