@@ -14,13 +14,15 @@ class ReportUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
-        XCTAssertTrue(app.waitForExistence(timeout: 1))
-
-        let actExists = app.activityIndicators.firstMatch.waitForExistence(timeout: 30)
-        XCTAssertTrue(actExists)
+        XCTAssertTrue(app.waitForExistence(timeout: 0))
         
         let tableView = app.tables.element.firstMatch
         XCTAssertTrue(tableView.exists)
+        let firstCell = tableView.cells.firstMatch
+        XCTAssertTrue(firstCell.exists)
+        
+        XCTAssertEqual(firstCell.staticTexts["headerLabel"].label, "Year: 2018")
+        XCTAssertEqual(firstCell.staticTexts["totalLabel"].label, "Total volume of mobile data: 75.35965 (Petabytes)")
     }
 
     func testLaunchPerformance() throws {
