@@ -17,6 +17,7 @@ class CustomCell: UITableViewCell {
         label.font = .systemFont(ofSize: 20)
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 0
+        label.accessibilityIdentifier = "headerLabel"
         return label
     }()
     var totalLabel: UILabel = {
@@ -24,6 +25,7 @@ class CustomCell: UITableViewCell {
         label.textColor = .lightGray
         label.adjustsFontSizeToFitWidth = true
         label.font = .systemFont(ofSize: 12)
+        label.accessibilityIdentifier = "totalLabel"
         return label
     }()
     var clickableImageView: UIImageView = {
